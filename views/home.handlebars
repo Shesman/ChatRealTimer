@@ -1,0 +1,54 @@
+<div class="container">
+    
+    <div class="loginBox">
+            <h2 class="text-danger">[  Apelido  ]</h2>
+            <div class="alert alert-danger">
+                <strong>Nome de usuário já utilizado!</strong>
+            </div>
+            <form id="frmLogin" method="POST">
+                <input type="text" name="txtUsername" id="txtUsername" placeholder="Nome de usário no chat..." required>
+                <button id="btnLogin" class="btn btn-primary"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+            </form>
+    </div>
+    <div class="chatBox">
+        <div class="row">
+            <div class="chat col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                <div class="panel panel-primary">
+                      <div class="panel-heading">
+                            <h5 id="info"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Nome de Usuário, [ <span id="username">hoailongg</span> ]
+                            <i id="logout" title="Sair da Sala!" class="fa fa-sign-out" aria-hidden="true"></i></h5>
+                      </div>
+                      <div class="panel-body">
+                            <div class="messageBox">
+                                <div class="messageContent"></div>
+                                <div class="messageType">
+                                    <form id="frmMessage" method="POST">
+                                        <input type="text" name="message" id="txtMessage" placeholder="Digite Aqui...">
+                                        <button class="btn btn-primary" id="btnSend"><i class="fa fa-paper-plane" aria-hidden="true"></i> Enviar</button>
+                                    </form>
+                                </div>
+                            </div>
+                      </div>
+                </div>
+            </div>
+            
+            <div class="online col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-users" aria-hidden="true"></i> Online
+                            <span id="users-online"class="badge"></span></h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="onlineBox">
+                            <ul class="list-users-online"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+        
+    </div>
+</div>
