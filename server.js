@@ -26,7 +26,7 @@ var users = [];
 var usersOnilne = [];
 
 io.on('connection', (socket) => {
-    console.log('1 nguoi vua truy cap!', socket.id);
+    console.log('Uma nova janela foi aberta!', socket.id);
     socket.on('client-login', (username) => {
         // console.log(username);
         if (users.includes(username)) { //username already exits
@@ -48,7 +48,7 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => {
         users.splice(users.indexOf(socket.username));
         socket.broadcast.emit('server-send-list-useronline', users);
-        console.log('1 nguoi vua thoat!');
+        console.log('1 janela foi fechada!', socket.id);
     });
 });
 
